@@ -8,5 +8,8 @@ def home(request):
 
     for board in boards:
         boards_names.append(board.name)
-    return HttpResponse("Hello World!")
+
+    response_html = '<br>'.join(boards_names)
+
+    return HttpResponse(response_html)
 
